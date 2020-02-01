@@ -5,7 +5,7 @@ public class Game {
 	Player player2;
 	Player winner;
 	Player loser;
-	private Score score = new Score();
+	private Score score;
 
 	/*
 	 * Constructor to initalise a game with players 

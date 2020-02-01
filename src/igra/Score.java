@@ -1,8 +1,8 @@
 package igra;
 
 public class Score {
-	private int player1Result;
-	private int player2Result;
+	private int player1Result = 0;
+	private int player2Result = 0;
 	private int[] overallGameScore = {0,0};
 	/*
 	 * Player scores, the score changes 
@@ -11,8 +11,10 @@ public class Score {
 		switch(player.getPlayerNumber()) {
 		  case 1:
 			  this.setPlayer1Result();
+			  break;
 		  case 2:
 			  this.setPlayer2Result();	
+			  break;
 		}
 		this.setOverallScore();
 	}
@@ -23,7 +25,8 @@ public class Score {
 		return this.player1Result;
 	}
 	public void setPlayer1Result() {
-		this.player1Result = this.player1Result + 15;
+		System.out.println(this.player1Result);
+		this.player1Result += 15;
 	}
 	/*
 	 * Setter and getter for player2 result 
@@ -32,7 +35,7 @@ public class Score {
 		return this.player2Result;
 	}
 	public void setPlayer2Result() {
-		this.player2Result = this.player2Result + 15;
+		this.player2Result += 15;
 	}
 	/*
 	 * Set the overall score 

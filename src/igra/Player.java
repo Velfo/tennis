@@ -2,7 +2,6 @@ package igra;
 
 public class Player {
 	private int playerNumber;
-
 	/*
 	 * Constructor to initalise player and their score 
 	 */
