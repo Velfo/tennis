@@ -16,7 +16,8 @@ public class Score {
 			  this.setPlayer2Result();	
 			  break;
 		}
-		this.setOverallScore();
+		System.out.println(this.getPlayer2Result());
+		this.setOverallGameScore();
 	}
 	/*
 	 * Setter and getter for player1 result 
@@ -26,7 +27,7 @@ public class Score {
 	}
 	public void setPlayer1Result() {
 		System.out.println(this.player1Result);
-		this.player1Result += 15;
+		this.player1Result = this.player1Result + 15;
 	}
 	/*
 	 * Setter and getter for player2 result 
@@ -35,19 +36,19 @@ public class Score {
 		return this.player2Result;
 	}
 	public void setPlayer2Result() {
-		this.player2Result += 15;
+		this.player2Result =this.player2Result + 15;
 	}
 	/*
 	 * Set the overall score 
 	 */
-	public void setOverallScore() {
+	public void setOverallGameScore() {
 		this.overallGameScore[0] = this.player1Result;
 		this.overallGameScore[1] = this.player2Result;
 	}
 	/*
 	 * Get the overall score 
 	 */
-	public int[] getOverallScore() {
+	public int[] getoverallGameScore() {
 		return this.overallGameScore;
 	}
 

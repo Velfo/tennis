@@ -6,6 +6,7 @@ public class Game {
 	Player winner;
 	Player loser;
 	private Score score;
+	private String advantage;
 
 	/*
 	 * Constructor to initalise a game with players 
@@ -22,7 +23,7 @@ public class Game {
 		this.score.playerScores(player);
 	}
 	/*
-	 * Check the scrore 
+	 * Check the score 
 	 */
 	public Score getScore() {
 		return score;
@@ -32,6 +33,15 @@ public class Game {
 	 */
 	public void setScore(Score score) {
 		this.score = score;
+	}
+	/*
+	 * Set and get the advantage attribute
+	 */
+	public String getAdvantage() {
+		return advantage;
+	}
+	public void setAdvantage(String advantage) {
+		this.advantage = advantage;
 	}
 	
 }
