@@ -11,9 +11,18 @@ public class Oyna {
 		 Match match = new Match(player1, player2);
 		 
 		
+		  match.pointWonBy(player1);
+		  match.pointWonBy(player1);
+		  match.pointWonBy(player1);
 		  match.pointWonBy(player2);
 		  match.pointWonBy(player2);
-		  match.pointWonBy(player2);
+		  match.pointWonBy(player1);
+		  match.pointWonBy(player1);
+		  match.pointWonBy(player1);
+		  match.pointWonBy(player1);
+		  match.pointWonBy(player1);
+		  match.pointWonBy(player1);
+		  match.pointWonBy(player1);
 		  match.pointWonBy(player1);
 		  // this will return "0-0, 15-15"
 		  match.score();

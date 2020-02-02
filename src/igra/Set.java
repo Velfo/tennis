@@ -7,6 +7,9 @@ public class Set {
 	private Score score;
 	// current game that is being played
 	Game currentGame;
+	boolean finished = false;
+	boolean currentGamefinished = false;
+	boolean setFinished = false;
 	int gameNumber = 1;
 	/*
 	 * Indicating the number of games won by each player
@@ -29,7 +32,7 @@ public class Set {
 	/*
 	 * Set the current game 
 	 */
-	public void setCurrentGame(Player player1, Player player2, int gameNumber) {
+	public void setNewGame() {
 		this.score = new  Score();
 		this.currentGame = new Game (player1, player2, this.score);
 		this.gameNumber += 1;
@@ -57,18 +60,42 @@ public class Set {
 
 
 	public void setScoreFor(Player player) {
-		this.currentGame.playerScores(player);
+		System.out.println("Game number " +this.gameNumber);
+		if(this.setFinished == true)
+		{
+			System.out.println("Set finished");
+			return;
+		}	
+		if(this.score.gameFinished == false)
+			this.currentGame.playerScores(player);
+		else {
+			this.setNewGame();
+		}
+	}
+	
+	public boolean gameFinished() {
+		
+		return finished;
+	}
+	
+    public Score getScore() {
+		return this.score;
 	}
 
 
-	public int[][] returnScore() {
+//	public int[][] returnScore() {
+//		// TODO Auto-generated method stub
+//		int [][] result = new int [2][];
+//		
+//		result[0] = gamesWon;
+//		result[1] = score.getoverallGameScore();
+//		
+//		return result;
+//	}
+	
+	public void returnScore() {
 		// TODO Auto-generated method stub
-		int [][] result = new int [2][];
-		
-		result[0] = gamesWon;
-		result[1] = score.getoverallGameScore();
-		
-		return result;
-	}
-
+//		this.score.determineGameScore();
+	}	
+	
 }

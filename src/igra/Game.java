@@ -20,7 +20,7 @@ public class Game {
 	 * Player scores 
 	 */
 	public void playerScores(Player player) {
-		this.score.playerScores(player);
+			this.score.playerScores(player);
 	}
 	/*
 	 * Check the score 

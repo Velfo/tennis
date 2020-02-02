@@ -4,6 +4,7 @@ public class Match {
     Set set;
     Player player1;
     Player player2;
+    boolean gameFinished = false;
 	/*
 	 * Constructor to initalise match with players 
 	 */
@@ -14,12 +15,18 @@ public class Match {
 	}
 	
 	public void pointWonBy(Player player) {
-		this.set.setScoreFor(player);
+		if(this.set.setFinished == false)
+			this.set.setScoreFor(player);
+		else {
+			System.out.println("Game finished");
+			return;
+		}
+		
 	}
 
-	public int [][] score() {
+	public void score() {
 		// TODO Auto-generated method stub
-		return this.set.returnScore();
+		this.set.returnScore();
 		
 	}	
 }
