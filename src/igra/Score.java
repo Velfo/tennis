@@ -9,6 +9,9 @@ public class Score {
 	private int[] overallGameScore = {0,0};
 	private int[] possileGameScores = {0,15,30,40};
 	boolean gameFinished = false;
+	private int gameWinner = 0;
+	private int player1ValueRes;
+	private int player2ValueRes; 
 	/*
 	 * Player scores, the score changes 
 	 */
@@ -33,25 +36,23 @@ public class Score {
 		boolean player1ScoreInArray = true;
 		boolean player2ScoreInArray = true;
 		
-		
-		
-		
 		if (player1Res > 3 || player2Res > 3) {
 			if (player1Res - player2Res > 1) {
 				System.out.println("Player 1 won");
+				this.setGameWinner(1);
 				gameFinished = true;
 				return true;
 			}
 			else if (player1Res - player2Res < -1) {
 				System.out.println("Player 2 won");
+				this.setGameWinner(2);
 				gameFinished = true;
 				return true;
 			}
 		
 		}else {
-			System.out.println("New score");
-			System.out.println(possileGameScores[player1Res]);
-			System.out.println(possileGameScores[player2Res]);
+			this.player1ValueRes = possileGameScores[player1Res];
+			this.player2ValueRes = possileGameScores[player2Res];
 		}
 		
 		return false;		
@@ -110,6 +111,24 @@ public class Score {
 	 */
 	public int[] getoverallGameScore() {
 		return this.overallGameScore;
+	}
+	public int getGameWinner() {
+		return gameWinner;
+	}
+	public void setGameWinner(int gameWinner) {
+		this.gameWinner = gameWinner;
+	}
+	public int getPlayer1ValueRes() {
+		return player1ValueRes;
+	}
+	public void setPlayer1ValueRes(int player1ValueRes) {
+		this.player1ValueRes = player1ValueRes;
+	}
+	public int getPlayer2ValueRes() {
+		return player2ValueRes;
+	}
+	public void setPlayer2ValueRes(int player2ValueRes) {
+		this.player2ValueRes = player2ValueRes;
 	}
 
 }

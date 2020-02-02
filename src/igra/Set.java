@@ -60,17 +60,28 @@ public class Set {
 
 
 	public void setScoreFor(Player player) {
-		System.out.println("Game number " +this.gameNumber);
 		if(this.setFinished == true)
 		{
-			System.out.println("Set finished");
+//			System.out.println("Set finished");
 			return;
 		}	
-		if(this.score.gameFinished == false)
+		if(this.score.gameFinished == false) {
 			this.currentGame.playerScores(player);
+//			System.out.println("--------------------------------------------------------");
+//			System.out.println("Game score "+this.score.getPlayer1ValueRes()+"-"+this.score.getPlayer2ValueRes());
+		}
 		else {
+			int gameWinner = this.score.getGameWinner();
+			if(gameWinner == 1) {
+				this.gamesWon[0]++; 
+			}else if(gameWinner == 2) {
+				this.gamesWon[1]++;
+			}
+//			System.out.println("OVERALL SET SCORE "+this.gamesWon[0]+"-"+this.gamesWon[1]);
+//			System.out.println("______________new game_______________");
 			this.setNewGame();
 		}
+		
 	}
 	
 	public boolean gameFinished() {
@@ -81,21 +92,10 @@ public class Set {
     public Score getScore() {
 		return this.score;
 	}
-
-
-//	public int[][] returnScore() {
-//		// TODO Auto-generated method stub
-//		int [][] result = new int [2][];
-//		
-//		result[0] = gamesWon;
-//		result[1] = score.getoverallGameScore();
-//		
-//		return result;
-//	}
 	
 	public void returnScore() {
-		// TODO Auto-generated method stub
-//		this.score.determineGameScore();
+		System.out.println(this.gamesWon[0]+"-"+this.gamesWon[1]
+				      +", "+this.score.getPlayer1ValueRes()+"-"+this.score.getPlayer2ValueRes());
 	}	
 	
 }
