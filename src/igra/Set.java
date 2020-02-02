@@ -115,12 +115,11 @@ public class Set {
 		return this.score;
 	}
 
-	
 	/*
 	 * Displaying possible scores
 	 */
 	public String retrnScore() {
-		
+
 		String returnString = "";
 
 		// Set finished situation

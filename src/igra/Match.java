@@ -42,9 +42,8 @@ public class Match {
 
 	public void score() {
 		// TODO Auto-generated method stub
-//		this.set.returnScore();
+		// this.set.returnScore();
 		System.out.println(this.set.retrnScore());
-		
 
 	}
 }
