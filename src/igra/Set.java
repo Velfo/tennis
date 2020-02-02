@@ -11,6 +11,7 @@ public class Set {
 	boolean currentGamefinished = false;
 	boolean setFinished = false;
 	int gameNumber = 1;
+	String advantage = "";
 	/*
 	 * Indicating the number of games won by each player
 	 * The index 0 of the array indicates the wins of the first player 
@@ -92,10 +93,34 @@ public class Set {
     public Score getScore() {
 		return this.score;
 	}
-	
+	/*
+	 * Displaying possible scores 
+	 */	
 	public void returnScore() {
-		System.out.println(this.gamesWon[0]+"-"+this.gamesWon[1]
+		
+		//Advantage situation
+		if(this.score.advantage != 0) {
+			if(this.score.advantage == 1)
+			{
+				this.advantage = "Advantage player 1";
+			}
+			else if(this.score.advantage == 2)
+			{
+				this.advantage = "Advantage player 2";
+			}
+			System.out.println(this.gamesWon[0]+"-"+this.gamesWon[1]
+				      +", "+this.advantage);
+			return;
+		}
+		//Advantage situation
+		if(this.score.deus != true && this.score.advantage == 0) {
+			System.out.println(this.gamesWon[0]+"-"+this.gamesWon[1]
 				      +", "+this.score.getPlayer1ValueRes()+"-"+this.score.getPlayer2ValueRes());
+		}else {
+			System.out.println(this.gamesWon[0]+"-"+this.gamesWon[1]
+				      +", Deus");
+		}
+		
 	}	
 	
 }

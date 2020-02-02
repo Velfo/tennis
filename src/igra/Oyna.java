@@ -24,6 +24,9 @@ public class Oyna {
 		  match.pointWonBy(player2);
 		  match.score();
 		  
+		  match.pointWonBy(player1);
+		  match.pointWonBy(player1);
+		  match.score();
 	}
 
 }

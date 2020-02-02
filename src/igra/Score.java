@@ -9,9 +9,12 @@ public class Score {
 	private int[] overallGameScore = {0,0};
 	private int[] possileGameScores = {0,15,30,40};
 	boolean gameFinished = false;
+	boolean deus = false;
 	private int gameWinner = 0;
 	private int player1ValueRes;
 	private int player2ValueRes; 
+	private int scoreDifference;
+	int advantage = 0;
 	/*
 	 * Player scores, the score changes 
 	 */
@@ -33,9 +36,24 @@ public class Score {
 	public boolean determineGameScore() {
 		int player1Res = getPlayer1Result();
 		int player2Res = getPlayer2Result();
-		boolean player1ScoreInArray = true;
-		boolean player2ScoreInArray = true;
+		this.deus = false;
+		this.advantage = 0;
+		this.scoreDifference = player1Res - player2Res;
 		
+		//Advantage situation
+		if (this.scoreDifference == 1) {
+			this.advantage = 1;
+		}
+		else if (this.scoreDifference == -1) {
+			this.advantage = 2;
+		}
+		
+		//Deus situation
+		if (player1Res == 3 && player2Res == 3) {
+			this.deus = true;
+		}
+		
+		//Winning and Deus situation
 		if (player1Res > 3 || player2Res > 3) {
 			if (player1Res - player2Res > 1) {
 				System.out.println("Player 1 won");
@@ -43,12 +61,16 @@ public class Score {
 				gameFinished = true;
 				return true;
 			}
-			else if (player1Res - player2Res < -1) {
+			else if (this.scoreDifference < -1) {
 				System.out.println("Player 2 won");
 				this.setGameWinner(2);
 				gameFinished = true;
 				return true;
 			}
+			else if (this.scoreDifference == 0) {
+				this.deus = true;
+			}
+			
 		
 		}else {
 			this.player1ValueRes = possileGameScores[player1Res];
