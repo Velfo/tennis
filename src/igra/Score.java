@@ -14,7 +14,7 @@ public class Score {
 	private int player1ValueRes;
 	private int player2ValueRes; 
 	private int scoreDifference;
-	int advantage = 0;
+	protected int advantage = 0;
 	/*
 	 * Player scores, the score changes 
 	 */
@@ -38,15 +38,6 @@ public class Score {
 		int player2Res = getPlayer2Result();
 		this.deus = false;
 		this.advantage = 0;
-		this.scoreDifference = player1Res - player2Res;
-		
-		//Advantage situation
-		if (this.scoreDifference == 1) {
-			this.advantage = 1;
-		}
-		else if (this.scoreDifference == -1) {
-			this.advantage = 2;
-		}
 		
 		//Deus situation
 		if (player1Res == 3 && player2Res == 3) {
@@ -55,7 +46,19 @@ public class Score {
 		
 		//Winning and Deus situation
 		if (player1Res > 3 || player2Res > 3) {
-			if (player1Res - player2Res > 1) {
+			
+			this.scoreDifference = player1Res - player2Res;
+			
+			//Advantage situation
+			if (this.scoreDifference == 1) {
+				this.advantage = 1;
+			}
+			else if (this.scoreDifference == -1) {
+				this.advantage = 2;
+			}
+			
+			
+			if (this.scoreDifference > 1) {
 				this.setGameWinner(1);
 				gameFinished = true;
 				return true;

@@ -79,8 +79,9 @@ public class Set {
 				this.gamesWon[1]++;
 			}
 //			System.out.println("OVERALL SET SCORE "+this.gamesWon[0]+"-"+this.gamesWon[1]);
-//			System.out.println("______________new game_______________");
+			System.out.println("______________new game_______________");
 			this.setNewGame();
+			this.setScoreFor(player);
 		}
 		
 	}
