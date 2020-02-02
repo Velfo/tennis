@@ -98,6 +98,18 @@ public class Set {
 	 */	
 	public void returnScore() {
 		
+		//Player wins situation
+		int gameWinner = this.score.getGameWinner();
+		if(gameWinner != 0) {
+			if(gameWinner == 1) {
+				this.gamesWon[0]++; 
+			}else if(gameWinner == 2) {
+				this.gamesWon[1]++;
+			}
+			System.out.println(this.gamesWon[0]+"-"+this.gamesWon[1]);
+			return;
+		}
+		
 		//Advantage situation
 		if(this.score.advantage != 0) {
 			if(this.score.advantage == 1)
@@ -112,13 +124,13 @@ public class Set {
 				      +", "+this.advantage);
 			return;
 		}
-		//Advantage situation
+		//No advantage situation
 		if(this.score.deus != true && this.score.advantage == 0) {
 			System.out.println(this.gamesWon[0]+"-"+this.gamesWon[1]
 				      +", "+this.score.getPlayer1ValueRes()+"-"+this.score.getPlayer2ValueRes());
 		}else {
 			System.out.println(this.gamesWon[0]+"-"+this.gamesWon[1]
-				      +", Deus");
+				      +", Deuce");
 		}
 		
 	}	

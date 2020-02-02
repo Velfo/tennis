@@ -56,13 +56,11 @@ public class Score {
 		//Winning and Deus situation
 		if (player1Res > 3 || player2Res > 3) {
 			if (player1Res - player2Res > 1) {
-				System.out.println("Player 1 won");
 				this.setGameWinner(1);
 				gameFinished = true;
 				return true;
 			}
 			else if (this.scoreDifference < -1) {
-				System.out.println("Player 2 won");
 				this.setGameWinner(2);
 				gameFinished = true;
 				return true;

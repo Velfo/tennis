@@ -13,20 +13,19 @@ public class Oyna {
 		
 		  match.pointWonBy(player1);
 		  match.pointWonBy(player2);
-		  // this will return "0-0, 15-15"
-		  match.score();
-		  
-		  match.pointWonBy(player1);
-		  match.pointWonBy(player1);
-		  match.score();
 		  
 		  match.pointWonBy(player2);
 		  match.pointWonBy(player2);
-		  match.score();
 		  
 		  match.pointWonBy(player1);
 		  match.pointWonBy(player1);
+		  
+		  
+		  match.pointWonBy(player2);
+		  match.pointWonBy(player2);
+	  
 		  match.score();
+		  
 	}
 
 }
