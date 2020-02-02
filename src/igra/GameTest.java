@@ -8,8 +8,8 @@ class GameTest {
 
 	@Test
 	void testGame() {
-		Player player1 = new Player(1);
-		Player player2 = new Player(2);
+		Player player1 = new Player(1, "player1");
+		Player player2 = new Player(2, "player2");
 		Score score = new Score();
 		
 		Game game = new Game(player1, player2, score);

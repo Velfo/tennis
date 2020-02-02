@@ -5,180 +5,100 @@ public class Oyna {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Player player1 = new Player(1);
-		Player player2 = new Player(2);
 
-		Match match = new Match(player1, player2);
+		Match match = new Match("player 1", "player 2");
 
-		match.pointWonBy(player1);
-		match.pointWonBy(player2);
-
-		match.pointWonBy(player1);
-		match.pointWonBy(player2);
-
-		match.pointWonBy(player1);
-		match.pointWonBy(player2);
-
-		match.pointWonBy(player1);
-		match.pointWonBy(player2);
-
-		match.pointWonBy(player2);
-		match.pointWonBy(player2);
-
-		match.pointWonBy(player1);
-		match.pointWonBy(player2);
-
-		match.pointWonBy(player1);
-		match.pointWonBy(player2);
-
-		match.pointWonBy(player1);
-		match.pointWonBy(player1);
-
-		match.pointWonBy(player1);
-		match.pointWonBy(player2);
-
-		match.pointWonBy(player1);
-		match.pointWonBy(player2);
-
-		match.pointWonBy(player1);
-		match.pointWonBy(player2);
-
-		match.pointWonBy(player2);
-		match.pointWonBy(player2);
-
-		match.pointWonBy(player1);
-		match.pointWonBy(player2);
-
-		match.pointWonBy(player1);
-		match.pointWonBy(player2);
-
-		match.pointWonBy(player1);
-		match.pointWonBy(player2);
-
-		match.pointWonBy(player1);
-		match.pointWonBy(player2);
-
-		match.pointWonBy(player2);
-		match.pointWonBy(player2);
-
-		match.pointWonBy(player1);
-		match.pointWonBy(player2);
-
-		match.pointWonBy(player1);
-		match.pointWonBy(player2);
-
-		match.pointWonBy(player1);
-		match.pointWonBy(player2);
-
-		match.pointWonBy(player2);
-		match.pointWonBy(player2);
-
-		match.pointWonBy(player1);
-		match.pointWonBy(player1);
-
-		match.pointWonBy(player1);
-		match.pointWonBy(player1);
-
-		match.pointWonBy(player1);
-		match.pointWonBy(player2);
-
-		match.pointWonBy(player2);
-		match.pointWonBy(player2);
-
-		match.pointWonBy(player2);
-		match.pointWonBy(player2);
-
-		match.pointWonBy(player2);
-		match.pointWonBy(player1);
-
-		match.pointWonBy(player1);
-		match.pointWonBy(player2);
-
-		match.pointWonBy(player1);
-		match.pointWonBy(player1);
-
-		match.pointWonBy(player1);
-
-		match.pointWonBy(player1);
-		match.pointWonBy(player1);
-
-		match.pointWonBy(player1);
-
-		match.pointWonBy(player1);
-		match.pointWonBy(player1);
-
-		match.pointWonBy(player1);
-
-		match.pointWonBy(player1);
-		match.pointWonBy(player1);
-
-		match.pointWonBy(player1);
-
-		match.pointWonBy(player1);
-
-		match.pointWonBy(player1);
-
-		match.pointWonBy(player2);
-
-		match.pointWonBy(player2);
-		match.pointWonBy(player2);
-
-		match.pointWonBy(player2);
-
-		match.pointWonBy(player2);
-
-		match.pointWonBy(player2);
-
-		match.pointWonBy(player2);
+		match.pointWonBy("player 1");
+		match.pointWonBy("player 1");
+		match.pointWonBy("player 1");
+		match.pointWonBy("player 2");
+		match.pointWonBy("player 2");
+		match.pointWonBy("player 2");
+		match.pointWonBy("player 2");
+		match.pointWonBy("player 1");
+	
+		match.pointWonBy("player 1");
+		match.pointWonBy("player 1");
+		match.pointWonBy("player 1");
+		match.pointWonBy("player 1");
+		match.pointWonBy("player 1");
+		match.pointWonBy("player 1");
+		match.pointWonBy("player 2");
+		match.pointWonBy("player 1");
 		
-		match.pointWonBy(player1);
+		match.pointWonBy("player 1");
+		match.pointWonBy("player 1");
+		match.pointWonBy("player 1");
+		match.pointWonBy("player 2");
+		match.pointWonBy("player 2");
+		match.pointWonBy("player 2");
+		match.pointWonBy("player 2");
+		match.pointWonBy("player 1");
 		
-		match.pointWonBy(player1);
+		match.pointWonBy("player 1");
+		match.pointWonBy("player 1");
+		match.pointWonBy("player 1");
+		match.pointWonBy("player 2");
+		match.pointWonBy("player 2");
+		match.pointWonBy("player 2");
+		match.pointWonBy("player 2");
+		match.pointWonBy("player 1");
 		
-		match.pointWonBy(player1);
+		match.pointWonBy("player 1");
+		match.pointWonBy("player 1");
+		match.pointWonBy("player 1");
+		match.pointWonBy("player 2");
+		match.pointWonBy("player 2");
+		match.pointWonBy("player 2");
+		match.pointWonBy("player 2");
+		match.pointWonBy("player 1");
 		
-		match.pointWonBy(player1);
+		match.pointWonBy("player 1");
 		
-		match.pointWonBy(player1);
+		match.pointWonBy("player 2");
+		match.pointWonBy("player 2");
+		match.pointWonBy("player 2");
+		match.pointWonBy("player 2");
 		
-		match.pointWonBy(player1);
+		match.pointWonBy("player 2");
+		match.pointWonBy("player 2");
+		match.pointWonBy("player 2");
+		match.pointWonBy("player 2");
 		
-		match.pointWonBy(player2);
+		match.pointWonBy("player 2");
+		match.pointWonBy("player 2");
+		match.pointWonBy("player 2");
+		match.pointWonBy("player 2");
 		
-		match.pointWonBy(player2);
+		match.pointWonBy("player 1");
+		match.pointWonBy("player 1");
+		match.pointWonBy("player 1");
+		match.pointWonBy("player 2");
+		match.pointWonBy("player 2");
+		match.pointWonBy("player 2");
+		match.pointWonBy("player 1");
+		match.pointWonBy("player 1");
 		
-		match.pointWonBy(player2);
+		match.pointWonBy("player 1");
+		match.pointWonBy("player 1");
+		match.pointWonBy("player 1");
+		match.pointWonBy("player 1");
+		match.pointWonBy("player 1");
+		match.pointWonBy("player 1");
 		
-		match.pointWonBy(player2);
+		match.pointWonBy("player 2");
+		match.pointWonBy("player 2");
+		match.pointWonBy("player 2");
+		match.pointWonBy("player 2");
+		match.pointWonBy("player 2");
+		match.pointWonBy("player 2");
 		
-		match.pointWonBy(player2);
+		match.pointWonBy("player 1");
+		match.pointWonBy("player 2");
+		match.pointWonBy("player 2");
+		match.pointWonBy("player 2");
 		
-		match.pointWonBy(player2);
-		
-		match.pointWonBy(player1);
-		
-		match.pointWonBy(player1);
-		
-		match.pointWonBy(player1);
-		
-		match.pointWonBy(player1);
-		
-		match.pointWonBy(player1);
-		
-		match.pointWonBy(player2);
-		
-		match.pointWonBy(player2);
-		
-		match.pointWonBy(player1);
-		
-		match.pointWonBy(player1);
-		
-		match.pointWonBy(player2);
-		
-		match.pointWonBy(player2);
-		
-		match.pointWonBy(player2);
-		
+		match.pointWonBy("player 1");
 
 		match.score();
 
