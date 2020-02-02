@@ -2,16 +2,18 @@ package igra;
 
 
 public class Set {
-	Player player1;
-	Player player2;
+	protected Player player1;
+	protected Player player2;
 	private Score score;
 	// current game that is being played
-	Game currentGame;
-	boolean finished = false;
-	boolean currentGamefinished = false;
-	boolean setFinished = false;
-	int gameNumber = 1;
-	String advantage = "";
+	protected Game currentGame;
+	protected boolean finished = false;
+	protected boolean currentGamefinished = false;
+	protected boolean setFinished = false;
+	protected int gameNumber = 1;
+	protected int setWinner = 0;
+	protected int gamesWonDifference = 0;
+	protected String advantage = "";
 	/*
 	 * Indicating the number of games won by each player
 	 * The index 0 of the array indicates the wins of the first player 
@@ -46,30 +48,36 @@ public class Set {
 		return gamesWon;
 	}
 	/*
-	 * Call this function when a player wins a game 
+	 * Check who won the set
 	 */	
-	public void setGamesWon(Player player) {
-		switch (player.getPlayerNumber()) {
-		case 1:
-			this.gamesWon[0] += 1;
-			break;
-		case 2:
-			this.gamesWon[1] += 1;
-			break;
+	public void checkSetWinner() {	
+		if (gamesWon[0] > 5 || gamesWon[1] > 5) {	
+			this.gamesWonDifference = gamesWon[0] - gamesWon[1]; 
+			
+			if (this.gamesWonDifference > 1) {
+				//player 1 won the set
+				this.setWinner = 1;
+				this.setFinished = true;
+ 			}
+			else if (this.gamesWonDifference < -1) {
+				//player 2 won the set
+				this.setWinner = 2;
+				this.setFinished = true;
+			}
+			
 		}
 	}
-
-
+	/*
+	 * Set the player scores as the game goes on 
+	 */	
 	public void setScoreFor(Player player) {
+		this.checkSetWinner();
 		if(this.setFinished == true)
 		{
-//			System.out.println("Set finished");
 			return;
 		}	
 		if(this.score.gameFinished == false) {
 			this.currentGame.playerScores(player);
-//			System.out.println("--------------------------------------------------------");
-//			System.out.println("Game score "+this.score.getPlayer1ValueRes()+"-"+this.score.getPlayer2ValueRes());
 		}
 		else {
 			int gameWinner = this.score.getGameWinner();
@@ -78,8 +86,6 @@ public class Set {
 			}else if(gameWinner == 2) {
 				this.gamesWon[1]++;
 			}
-//			System.out.println("OVERALL SET SCORE "+this.gamesWon[0]+"-"+this.gamesWon[1]);
-			System.out.println("______________new game_______________");
 			this.setNewGame();
 			this.setScoreFor(player);
 		}
@@ -98,6 +104,14 @@ public class Set {
 	 * Displaying possible scores 
 	 */	
 	public void returnScore() {
+		
+		//Set finished situation
+		this.checkSetWinner();
+		if(this.setFinished == true)
+		{
+			System.out.println(this.gamesWon[0]+"-"+this.gamesWon[1]);
+			return;
+		}
 		
 		//Player wins situation
 		int gameWinner = this.score.getGameWinner();

@@ -15,10 +15,9 @@ public class Match {
 	}
 	
 	public void pointWonBy(Player player) {
-		if(this.set.setFinished == false)
+		if(this.set.setFinished != true)
 			this.set.setScoreFor(player);
 		else {
-			System.out.println("Game finished");
 			return;
 		}
 		

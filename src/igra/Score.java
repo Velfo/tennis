@@ -8,8 +8,8 @@ public class Score {
 	private int player2Result = 0;
 	private int[] overallGameScore = {0,0};
 	private int[] possileGameScores = {0,15,30,40};
-	boolean gameFinished = false;
-	boolean deus = false;
+	protected boolean gameFinished = false;
+	protected boolean deus = false;
 	private int gameWinner = 0;
 	private int player1ValueRes;
 	private int player2ValueRes; 
@@ -80,23 +80,6 @@ public class Score {
 		
 		return false;		
 	}
-	/*
-	 * Utility method to check if array contains an integer 
-	 */
-	
-	   public static boolean contains(final int[] array, final int v) {
-	
-	        boolean result = false;
-	
-	        for(int i : array){
-	            if(i == v){
-	                result = true;
-	                break;
-	            }
-	        }
-	
-	        return result;
-	    }
 	
 	/*
 	 * Setter and getter for player1 result 
