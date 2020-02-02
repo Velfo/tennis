@@ -1,7 +1,7 @@
 package igra;
 
 public class Match {
-	Set set;
+	protected Set set;
 	Player player1;
 	Player player2;
 	Player scoringPlayer;
@@ -42,7 +42,9 @@ public class Match {
 
 	public void score() {
 		// TODO Auto-generated method stub
-		this.set.returnScore();
+//		this.set.returnScore();
+		System.out.println(this.set.retrnScore());
+		
 
 	}
 }

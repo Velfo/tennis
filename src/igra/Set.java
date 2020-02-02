@@ -115,16 +115,19 @@ public class Set {
 		return this.score;
 	}
 
+	
 	/*
 	 * Displaying possible scores
 	 */
-	public void returnScore() {
+	public String retrnScore() {
+		
+		String returnString = "";
 
 		// Set finished situation
 		this.checkSetWinner();
 		if (this.setFinished == true) {
-			System.out.println(this.gamesWon[0] + "-" + this.gamesWon[1]);
-			return;
+			returnString = this.gamesWon[0] + "-" + this.gamesWon[1];
+			return returnString;
 		}
 
 		// Player wins situation
@@ -135,10 +138,9 @@ public class Set {
 			} else if (gameWinner == 2) {
 				this.gamesWon[1]++;
 			}
-			System.out.println(this.gamesWon[0] + "-" + this.gamesWon[1]);
 			// Tie-break won situation
-
-			return;
+			returnString = this.gamesWon[0] + "-" + this.gamesWon[1];
+			return returnString;
 		}
 
 		// Advantage situation
@@ -148,17 +150,18 @@ public class Set {
 			} else if (this.score.advantage == 2) {
 				this.advantage = "Advantage player 2";
 			}
-			System.out.println(this.gamesWon[0] + "-" + this.gamesWon[1] + ", " + this.advantage);
-			return;
+			returnString = this.gamesWon[0] + "-" + this.gamesWon[1] + ", " + this.advantage;
+			return returnString;
 		}
 		// No advantage situation
 		if (this.score.deus != true && this.score.advantage == 0) {
-			System.out.println(this.gamesWon[0] + "-" + this.gamesWon[1] + ", " + this.score.getPlayer1ValueRes() + "-"
-					+ this.score.getPlayer2ValueRes());
+			returnString = this.gamesWon[0] + "-" + this.gamesWon[1] + ", " + this.score.getPlayer1ValueRes() + "-"
+					+ this.score.getPlayer2ValueRes();
+			return returnString;
 		} else {
-			System.out.println(this.gamesWon[0] + "-" + this.gamesWon[1] + ", Deuce");
+			returnString = this.gamesWon[0] + "-" + this.gamesWon[1] + ", Deuce";
+			return returnString;
 		}
-
 	}
 
 }

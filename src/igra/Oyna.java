@@ -16,91 +16,16 @@ public class Oyna {
 		match.pointWonBy("player 2");
 		match.pointWonBy("player 2");
 		match.pointWonBy("player 1");
-	
-		match.pointWonBy("player 1");
-		match.pointWonBy("player 1");
-		match.pointWonBy("player 1");
-		match.pointWonBy("player 1");
-		match.pointWonBy("player 1");
-		match.pointWonBy("player 1");
-		match.pointWonBy("player 2");
 		match.pointWonBy("player 1");
 		
-		match.pointWonBy("player 1");
-		match.pointWonBy("player 1");
-		match.pointWonBy("player 1");
-		match.pointWonBy("player 2");
-		match.pointWonBy("player 2");
-		match.pointWonBy("player 2");
-		match.pointWonBy("player 2");
-		match.pointWonBy("player 1");
-		
-		match.pointWonBy("player 1");
-		match.pointWonBy("player 1");
-		match.pointWonBy("player 1");
-		match.pointWonBy("player 2");
-		match.pointWonBy("player 2");
-		match.pointWonBy("player 2");
-		match.pointWonBy("player 2");
-		match.pointWonBy("player 1");
-		
-		match.pointWonBy("player 1");
-		match.pointWonBy("player 1");
-		match.pointWonBy("player 1");
-		match.pointWonBy("player 2");
-		match.pointWonBy("player 2");
-		match.pointWonBy("player 2");
-		match.pointWonBy("player 2");
-		match.pointWonBy("player 1");
-		
-		match.pointWonBy("player 1");
-		
-		match.pointWonBy("player 2");
-		match.pointWonBy("player 2");
-		match.pointWonBy("player 2");
-		match.pointWonBy("player 2");
-		
-		match.pointWonBy("player 2");
-		match.pointWonBy("player 2");
-		match.pointWonBy("player 2");
-		match.pointWonBy("player 2");
-		
-		match.pointWonBy("player 2");
-		match.pointWonBy("player 2");
-		match.pointWonBy("player 2");
-		match.pointWonBy("player 2");
-		
-		match.pointWonBy("player 1");
-		match.pointWonBy("player 1");
-		match.pointWonBy("player 1");
-		match.pointWonBy("player 2");
-		match.pointWonBy("player 2");
-		match.pointWonBy("player 2");
-		match.pointWonBy("player 1");
-		match.pointWonBy("player 1");
-		
-		match.pointWonBy("player 1");
-		match.pointWonBy("player 1");
-		match.pointWonBy("player 1");
-		match.pointWonBy("player 1");
-		match.pointWonBy("player 1");
-		match.pointWonBy("player 1");
-		
-		match.pointWonBy("player 2");
-		match.pointWonBy("player 2");
-		match.pointWonBy("player 2");
-		match.pointWonBy("player 2");
-		match.pointWonBy("player 2");
-		match.pointWonBy("player 2");
-		
-		match.pointWonBy("player 1");
-		match.pointWonBy("player 2");
-		match.pointWonBy("player 2");
-		match.pointWonBy("player 2");
-		
-		match.pointWonBy("player 1");
 
+
+
+	
+		
 		match.score();
+
+		
 
 	}
 
